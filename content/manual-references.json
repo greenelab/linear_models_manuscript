@@ -18,5 +18,24 @@
       "family": "Himmelstein"
     }
   ]
-}
+},
+{
+    "URL": "https://neptune.ai",
+    "author": [
+      {
+        "literal": "neptune.ai"
+      }
+    ],
+    "id": "neptune",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "title": "Neptune: Experiment management and collaboration tool",
+    "title-short": "Neptune",
+    "type": "webpage"
+  }
 ]
