@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Benjamin Heil" />
-  <meta name="dcterms.date" content="2022-03-03" />
+  <meta name="dcterms.date" content="2022-03-07" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>The Effects of Nonlinear Signal on Expression-Based Prediction Performance</title>
   <style>
@@ -44,8 +44,8 @@
   <meta name="citation_title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="og:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="twitter:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
-  <meta name="dc.date" content="2022-03-03" />
-  <meta name="citation_publication_date" content="2022-03-03" />
+  <meta name="dc.date" content="2022-03-07" />
+  <meta name="citation_publication_date" content="2022-03-07" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -62,9 +62,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/linear_models_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/151fe59390aa1965a3b2d59ca653425da3df3700/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/151fe59390aa1965a3b2d59ca653425da3df3700/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/151fe59390aa1965a3b2d59ca653425da3df3700/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/7f9e27677e0fccc89c0ae71b86260a28b719355a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/7f9e27677e0fccc89c0ae71b86260a28b719355a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/7f9e27677e0fccc89c0ae71b86260a28b719355a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -81,10 +81,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/linear_models_manuscript/v/151fe59390aa1965a3b2d59ca653425da3df3700/">permalink</a>)
+(<a href="https://greenelab.github.io/linear_models_manuscript/v/7f9e27677e0fccc89c0ae71b86260a28b719355a/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/linear_models_manuscript/tree/151fe59390aa1965a3b2d59ca653425da3df3700">greenelab/linear_models_manuscript@151fe59</a>
-on March 3, 2022.
+from <a href="https://github.com/greenelab/linear_models_manuscript/tree/7f9e27677e0fccc89c0ae71b86260a28b719355a">greenelab/linear_models_manuscript@7f9e276</a>
+on March 7, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -148,7 +148,7 @@ Namely, we evaluated the models on their ability to predict which of the 21 most
 In this setting, we found that our five layer network and logistic regression performed roughly the same, while the three layer network had lower accuracy (fig. <a href="#fig:recount-multiclass">3</a>).</p>
 <div id="fig:recount-binary" class="fignos">
 <figure>
-<img src="./images/recount_binary.svg" alt="Figure 2: Comparison of models’ binary classification performance before and after removing linear signal" />
+<img src="./images/recount_binary_combined.svg" alt="Figure 2: Comparison of models’ binary classification performance before and after removing linear signal" />
 <figcaption aria-hidden="true"><span>Figure 2:</span> Comparison of models’ binary classification performance before and after removing linear signal</figcaption>
 </figure>
 </div>
@@ -170,15 +170,15 @@ This artifact was selected as the lesser of two evils, as removing signal from t
 <p>We then simulated simple binary classification tasks to ensure that the results weren’t due to an unknown signal in the data.
 Our initial simulated dataset consisted of two types of features: half of the features had a linear dividing line between the simulated classes while the other half had a nonlinear dividing line.
 After training to classify the simulated dataset, all models were able to effectively predict the simulated classes.
-After removing the linear signal from the dataset, nonlinear models were still able to easily predict the correct classes, but logistic regression was no better than random (fig <a href="#fig:simulation">4</a> top).</p>
+After removing the linear signal from the dataset, nonlinear models were still able to easily predict the correct classes, but logistic regression was no better than random (fig <a href="#fig:simulation">4</a> middle).</p>
 <p>To ensure that the high performance of the nonlinear models wasn’t due to nonlinear signal induced by the correction method, we generated another simulated dataset consiting solely of features with a linear dividing line between the classes.
 As before, all models were able to predict the different classes well.
-However, once the linear signal was removed all models had accuracy no better than random guessing, indicating that the signal removal method was not generating nonlinear signal (fig <a href="#fig:simulation">4</a> bottom).</p>
+However, once the linear signal was removed all models had accuracy no better than random guessing, indicating that the signal removal method was not generating nonlinear signal (fig <a href="#fig:simulation">4</a> left).</p>
 <p>We also trained the models on a dataset where all features were gaussian noise as a negative control.
-As expected, the models all performed at baseline accuracy both before and after the signal removal process (Supp fig. TODO).</p>
+As expected, the models all performed at baseline accuracy both before and after the signal removal process (fig. <a href="#fig:simulation">4</a> right).</p>
 <div id="fig:simulation" class="fignos">
 <figure>
-<img src="./images/sim_data.svg" alt="Figure 4: Performance of models in binary classification of simulated data before and after signal removal" />
+<img src="./images/simulated_data_combined.svg" alt="Figure 4: Performance of models in binary classification of simulated data before and after signal removal" />
 <figcaption aria-hidden="true"><span>Figure 4:</span> Performance of models in binary classification of simulated data before and after signal removal</figcaption>
 </figure>
 </div>
@@ -186,72 +186,42 @@ As expected, the models all performed at baseline accuracy both before and after
 <p>To validate our findings on a separate real dataset, we selected the expression data from GTEx <span class="citation" data-cites="187XBwaz7">[<a href="#ref-187XBwaz7" role="doc-biblioref">18</a>]</span>.
 Because it was generated by fewer labs with more consistent experimental design across samples, it is a less heterogeneous dataset than the Recount3 compendium.
 We trained our models to do binary classification on pairs of the five most common tissues in the dataset, then performed multiclass classification on all 31 tissues present in the dataset.
-Likely due to the cleaner nature of the GTEx data, all models were able to perform perfectly on the binary classification tasks [??].
-The harder multitask classification problem showed logistic regression outperforming the five layer neural network, which in turn outperformed the three layer net.</p>
+Likely due to the cleaner nature of the GTEx data, all models were able to perform perfectly on the binary classification tasks (Fig. <a href="#fig:gtex">5</a> bottom)
+The harder multitask classification problem showed logistic regression outperforming the five layer neural network, which in turn outperformed the three layer net (fig. <a href="#fig:gtex">5</a> top).</p>
 <p>The linear signal removal results on the binary classification problems were consistent with those from the Recount3 compendium.
-The neural networks performed less well in the low-data regime, indicating an increase in the difficulty of the problem, and the logistic regression implementation performed no better than random [??].
-Similarly, the multiclass problem had the logistic regression model performing poorly, while the nonlinear models had performance that increased with an increase in data while remaining worse than before the linear signal was removed [fig:TODO].</p>
+The neural networks performed less well in the low-data regime, indicating an increase in the difficulty of the problem, and the logistic regression implementation performed no better than random (Fig. <a href="#fig:gtex">5</a> bottom).
+Similarly, the multiclass problem had the logistic regression model performing poorly, while the nonlinear models had performance that increased with an increase in data while remaining worse than before the linear signal was removed (Fig. <a href="#fig:gtex">5</a> top).</p>
 <div id="fig:gtex" class="fignos">
 <figure>
-<img src="./images/gtex_multiclass.svg" alt="Figure 5: GTEx multiclass tissue prediction" />
-<figcaption aria-hidden="true"><span>Figure 5:</span> GTEx multiclass tissue prediction</figcaption>
+<img src="./images/gtex_combined.svg" alt="Figure 5: Performance of model on GTEx classification problems. The top figures show the difference in training models in the multiclass setting with and without signal removal, while the bottom figures show binary classification with and without signal removal." />
+<figcaption aria-hidden="true"><span>Figure 5:</span> Performance of model on GTEx classification problems. The top figures show the difference in training models in the multiclass setting with and without signal removal, while the bottom figures show binary classification with and without signal removal.</figcaption>
 </figure>
 </div>
-<div id="fig:gtex" class="fignos">
+<h3 id="sex-prediction-validation">Sex prediction validation</h3>
+<p>To rule out the possibility that our findings were specific to tissue prediction tasks, we examined models’ ability to predict metadata-derived sex (Fig. <a href="#fig:sex-prediction">6</a>).
+We used the same experimental setup as in our other Recount3 binary prediction tasks to train the models, but rather than using tissue labels we used metadata-derived sex labels.
+In this setting we found that, at least in the 5000-15000 sample range, the nonlinear models outperformed logistic regression.
+This result demonstrates that despite the compelling accuracy of linear models, there are still problem settings where nonlinear models perform better.</p>
+<div id="fig:sex-prediction" class="fignos">
 <figure>
-<img src="./images/gtex_multiclass_signal_removed.svg" alt="Figure 6: GTEx multiclass prediction after signal removal" />
-<figcaption aria-hidden="true"><span>Figure 6:</span> GTEx multiclass prediction after signal removal</figcaption>
-</figure>
-</div>
-<div id="fig:gtex-pairwise" class="fignos">
-<figure>
-<img src="./images/gtex_pairwise.svg" alt="Figure 7: GTEx binary tissue prediction" />
-<figcaption aria-hidden="true"><span>Figure 7:</span> GTEx binary tissue prediction</figcaption>
-</figure>
-</div>
-<div id="fig:gtex-pairwise" class="fignos">
-<figure>
-<img src="./images/gtex_pairwise_signal_removed.svg" alt="Figure 8: GTEx binary tissue prediction after signal removal" />
-<figcaption aria-hidden="true"><span>Figure 8:</span> GTEx binary tissue prediction after signal removal</figcaption>
+<img src="./images/sex_prediction.svg" alt="Figure 6: Metadata sex prediction" />
+<figcaption aria-hidden="true"><span>Figure 6:</span> Metadata sex prediction</figcaption>
 </figure>
 </div>
 <h3 id="pretraining">Pretraining</h3>
 <p>A common usage pattern in machine learning is to train models on a general dataset then fine-tune them on a dataset of interest.
-To ensure that our results weren’t made irrelevant by different behavior in the pretraining context, we examined the performance of the models with and without pretraining (Fig. <a href="#fig:pretrain">9</a>).
+To ensure that our results weren’t made irrelevant by different behavior in the pretraining context, we examined the performance of the models with and without pretraining (Supp. fig TODO).
 We split our data into three sets: pretraining, training, and validation (Fig. <a href="#fig:workflow">1</a> bottom), then trained two identically initialized copies of each model.
 One copy was trained solely on the training data, while the other was trained on the pretraining data then fine-tuned on the training data.</p>
 <p>The pretrained models showed high performance even when trained with small amounts of data from the training set.
 However, the nonlinear models did not have a greater performance gain from pretraining than logistic regression, and the balanced accuracy was similar across models.
 In fact, all models showed lower performance than when using the full training data, as models forget information from previous runs during fine-tuning <span class="citation" data-cites="LhPDWz2s">[<a href="#ref-LhPDWz2s" role="doc-biblioref">22</a>]</span>.</p>
-<div id="fig:pretrain" class="fignos">
-<figure>
-<img src="./images/recount_pretraining.svg" alt="Figure 9: Performance of models with and without pretraining" />
-<figcaption aria-hidden="true"><span>Figure 9:</span> Performance of models with and without pretraining</figcaption>
-</figure>
-</div>
 <h3 id="sample-splitting">Sample splitting</h3>
 <p>We considered it possible that our results were an artifact of our method of dataset splitting, and set out to test it.
 There is a common method of data splitting we refer to as samplewise splitting (see Methods) that leaks information between the train and validation sets when used in transcriptomic tasks.
 To avoid this data leakage, we split the dataset at the study level in our Recount3 analyses.
-We found that there is in fact a large degree of performance inflation evident when comparing the sample-split results to the study-split results in the Recount3 multiclass setting (Fig. <a href="#fig:splitting">11</a>).
+We found that there is in fact a large degree of performance inflation evident when comparing the sample-split results to the study-split results in the Recount3 multiclass setting (Supp Fig. <a href="#fig:splitting">10</a>).
 While this supports our decision to use study-level splitting, the relative performance of each model stays the same regardless of data splitting technique.</p>
-<div id="fig:splitting" class="fignos">
-<figure>
-<img src="./images/recount_multiclass_sample_split.svg" alt="Figure 10: Performance of models with different data splitting" />
-<figcaption aria-hidden="true"><span>Figure 10:</span> Performance of models with different data splitting</figcaption>
-</figure>
-</div>
-<h3 id="sex-prediction-validation">Sex prediction validation</h3>
-<p>To rule out the possibility that our findings were specific to tissue prediction tasks, we examined models’ ability to predict metadata-derived sex (Fig. ??).
-We used the same experimental setup as in our other Recount3 binary prediction tasks to train the models, but rather than using tissue labels we used metadata-derived sex labels.
-In this setting we found that, at least in the 5000-15000 sample range, the nonlinear models outperformed logistic regression.
-This result demonstrates that despite the compelling accuracy of linear models, there are still problem settings where nonlinear models perform better.</p>
-<div id="fig:splitting" class="fignos">
-<figure>
-<img src="./images/sex_prediction_studywise.svg" alt="Figure 11: Metadata sex prediction" />
-<figcaption aria-hidden="true"><span>Figure 11:</span> Metadata sex prediction</figcaption>
-</figure>
-</div>
 <h2 id="methods">Methods</h2>
 <h3 id="data">Data</h3>
 <h4 id="recount3">Recount3</h4>
@@ -382,14 +352,14 @@ We examined the metadata for attributes that might be correlated with sample pre
 <h2 id="results-1">Results</h2>
 <h3 id="signal-removal-1">Signal removal</h3>
 <p>As mentioned in the main results section, training a more accurate linear model on signal-removed training data leads to a less accurate model on the validation data due to removing signal on the entire dataset at once.
-However, the alternative can lead to even worse artifacts, as seen in fig. sup. <a href="#fig:split-signal-correction">12</a>, where the the linear and nonlinear models have random average performance via different methods.
+However, the alternative can lead to even worse artifacts, as seen in fig. sup. <a href="#fig:split-signal-correction">7</a>, where the the linear and nonlinear models have random average performance via different methods.
 We suspect the swings in model performance in the nonlinear data are due to colinearity in the features.
 That is to say that given the option of a number of possible corrections that can be made to remove the linear signal in the data, there is no guarantee that the same one is selected in the train and validation sets.
 For that reason, it’s possible to end up with results where the model performance varies wildly in different runs of the signal removal method based on the input data.</p>
 <div id="fig:split-signal-correction" class="fignos">
 <figure>
-<img src="./images/sex_prediction_split_signal.svg" alt="Figure 12:  Sex prediction results when removing signal from training fold and validation fold separately." />
-<figcaption aria-hidden="true"><span>Figure 12:</span> <br />
+<img src="./images/sex_prediction_split_signal.svg" alt="Figure 7:  Sex prediction results when removing signal from training fold and validation fold separately." />
+<figcaption aria-hidden="true"><span>Figure 7:</span> <br />
 Sex prediction results when removing signal from training fold and validation fold separately.</figcaption>
 </figure>
 </div>
@@ -398,12 +368,29 @@ Sex prediction results when removing signal from training fold and validation fo
 Accordingly, we were optimizing for similarity of implementation instead of maximal performance.
 Scikit-learn, on the other hand, optimizes their models to have the best out-of-box performance they can manage.
 To understand the magnitude of the difference, we compared the sklearn logistic regression model to our pytorch models.
-We found that it generally outperformed the other models (supp. fig. <a href="#fig:sklearn">13</a>).</p>
+We found that it generally outperformed the other models (supp. fig. <a href="#fig:sklearn">8</a>).</p>
 <div id="fig:sklearn" class="fignos">
 <figure>
-<img src="./images/sklearn.svg" alt="Figure 13:  TODO description, build figure" />
-<figcaption aria-hidden="true"><span>Figure 13:</span> <br />
+<img src="./images/sklearn.svg" alt="Figure 8:  TODO description, build figure" />
+<figcaption aria-hidden="true"><span>Figure 8:</span> <br />
 TODO description, build figure</figcaption>
+</figure>
+</div>
+<h3 id="recount3-pretraining-figure">Recount3 Pretraining Figure</h3>
+<div id="fig:pretrain" class="fignos">
+<figure>
+<img src="./images/recount_pretraining.svg" alt="Figure 9:  Performance of Recount3 multiclass prediction with pretraining" />
+<figcaption aria-hidden="true"><span>Figure 9:</span> <br />
+Performance of Recount3 multiclass prediction with pretraining</figcaption>
+</figure>
+</div>
+<h3 id="samplewise-splitting">Samplewise splitting</h3>
+<div id="fig:splitting" class="fignos">
+<figure>
+<img src="./images/recount_multiclass_sample_split.svg" alt="Figure 10:  Performance of models with different data splitting " />
+<figcaption aria-hidden="true"><span>Figure 10:</span> <br />
+Performance of models with different data splitting<br />
+</figcaption>
 </figure>
 </div>
 <h2 class="page_break_before" id="references">References</h2>
