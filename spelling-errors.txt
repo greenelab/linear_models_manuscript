@@ -13,7 +13,7 @@ funcion
 genotypes
 GTEx
 Heil
-Hyperparameters
+hyperparameters
 kilobase
 labled
 learnable
@@ -26,9 +26,8 @@ nonlinearities
 NumPy
 obstensibly
 phenotypes
-pretrain
 pretrained
-pretraining
+Pretraining
 ReLU
 removeBatchEffect
 RPKM
@@ -40,11 +39,11 @@ scrna
 sklearn
 SMTS
 Snakemake
-studywise
+Studywise
 subtype
 TODO
 TPM
 trainining
-Transcriptomic
+transcriptomic
 xt
 XXXXXXXX

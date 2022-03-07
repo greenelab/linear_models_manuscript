@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2022-03-03'
+date-meta: '2022-03-07'
 author-meta:
 - Benjamin Heil
 header-includes: |-
@@ -18,8 +18,8 @@ header-includes: |-
   <meta name="citation_title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="og:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="twitter:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
-  <meta name="dc.date" content="2022-03-03" />
-  <meta name="citation_publication_date" content="2022-03-03" />
+  <meta name="dc.date" content="2022-03-07" />
+  <meta name="citation_publication_date" content="2022-03-07" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -36,9 +36,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/linear_models_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/151fe59390aa1965a3b2d59ca653425da3df3700/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/151fe59390aa1965a3b2d59ca653425da3df3700/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/151fe59390aa1965a3b2d59ca653425da3df3700/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/7f9e27677e0fccc89c0ae71b86260a28b719355a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/7f9e27677e0fccc89c0ae71b86260a28b719355a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/7f9e27677e0fccc89c0ae71b86260a28b719355a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -60,10 +60,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/linear_models_manuscript/v/151fe59390aa1965a3b2d59ca653425da3df3700/))
+([permalink](https://greenelab.github.io/linear_models_manuscript/v/7f9e27677e0fccc89c0ae71b86260a28b719355a/))
 was automatically generated
-from [greenelab/linear_models_manuscript@151fe59](https://github.com/greenelab/linear_models_manuscript/tree/151fe59390aa1965a3b2d59ca653425da3df3700)
-on March 3, 2022.
+from [greenelab/linear_models_manuscript@7f9e276](https://github.com/greenelab/linear_models_manuscript/tree/7f9e27677e0fccc89c0ae71b86260a28b719355a)
+on March 7, 2022.
 </em></small>
 
 ## Authors
@@ -148,7 +148,7 @@ In this setting, we found that our five layer network and logistic regression pe
 
 ![
 Comparison of models' binary classification performance before and after removing linear signal
-](./images/recount_binary.svg "Recount binary classification before and after signal removal"){#fig:recount-binary}
+](./images/recount_binary_combined.svg "Recount binary classification before and after signal removal"){#fig:recount-binary}
 
 ![
 Graph of the Recount3 multiclass classification results. Each point represents the validation set balanced accuracy of a separate trained model. The color of the points and the trend lines shows their corresponding model class, while the dashed line represents the baseline accuracy of random predictions.
@@ -168,74 +168,33 @@ This artifact was selected as the lesser of two evils, as removing signal from t
 We then simulated simple binary classification tasks to ensure that the results weren't due to an unknown signal in the data.
 Our initial simulated dataset consisted of two types of features: half of the features had a linear dividing line between the simulated classes while the other half had a nonlinear dividing line.
 After training to classify the simulated dataset, all models were able to effectively predict the simulated classes.
-After removing the linear signal from the dataset, nonlinear models were still able to easily predict the correct classes, but logistic regression was no better than random (fig @fig:simulation top).
+After removing the linear signal from the dataset, nonlinear models were still able to easily predict the correct classes, but logistic regression was no better than random (fig @fig:simulation middle).
 
 To ensure that the high performance of the nonlinear models wasn't due to nonlinear signal induced by the correction method, we generated another simulated dataset consiting solely of features with a linear dividing line between the classes.
 As before, all models were able to predict the different classes well.
-However, once the linear signal was removed all models had accuracy no better than random guessing, indicating that the signal removal method was not generating nonlinear signal (fig @fig:simulation bottom).
+However, once the linear signal was removed all models had accuracy no better than random guessing, indicating that the signal removal method was not generating nonlinear signal (fig @fig:simulation left).
 
 We also trained the models on a dataset where all features were gaussian noise as a negative control.
-As expected, the models all performed at baseline accuracy both before and after the signal removal process (Supp fig. TODO).
+As expected, the models all performed at baseline accuracy both before and after the signal removal process (fig. @fig:simulation right).
 
 ![
 Performance of models in binary classification of simulated data before and after signal removal
-](./images/sim_data.svg ){#fig:simulation}
+](./images/simulated_data_combined.svg ){#fig:simulation}
 
 ### GTEx validation
 To validate our findings on a separate real dataset, we selected the expression data from GTEx [@doi:10.1038/ng.2653].
 Because it was generated by fewer labs with more consistent experimental design across samples, it is a less heterogeneous dataset than the Recount3 compendium.
 We trained our models to do binary classification on pairs of the five most common tissues in the dataset, then performed multiclass classification on all 31 tissues present in the dataset.
-Likely due to the cleaner nature of the GTEx data, all models were able to perform perfectly on the binary classification tasks [@fig:TODO].
-The harder multitask classification problem showed logistic regression outperforming the five layer neural network, which in turn outperformed the three layer net.
+Likely due to the cleaner nature of the GTEx data, all models were able to perform perfectly on the binary classification tasks (Fig. @fig:gtex bottom)
+The harder multitask classification problem showed logistic regression outperforming the five layer neural network, which in turn outperformed the three layer net (fig. @fig:gtex top).
 
 The linear signal removal results on the binary classification problems were consistent with those from the Recount3 compendium.
-The neural networks performed less well in the low-data regime, indicating an increase in the difficulty of the problem, and the logistic regression implementation performed no better than random [@fig:TODO].
-Similarly, the multiclass problem had the logistic regression model performing poorly, while the nonlinear models had performance that increased with an increase in data while remaining worse than before the linear signal was removed [fig:TODO].
-
-[comment]: <> (TODO add text references to figures when finalized)
+The neural networks performed less well in the low-data regime, indicating an increase in the difficulty of the problem, and the logistic regression implementation performed no better than random (Fig. @fig:gtex bottom).
+Similarly, the multiclass problem had the logistic regression model performing poorly, while the nonlinear models had performance that increased with an increase in data while remaining worse than before the linear signal was removed (Fig. @fig:gtex top).
 
 ![
-GTEx multiclass tissue prediction
-](./images/gtex_multiclass.svg ){#fig:gtex}
-
-![
-GTEx multiclass prediction after signal removal
-](./images/gtex_multiclass_signal_removed.svg ){#fig:gtex}
-
-
-![
-GTEx binary tissue prediction
-](./images/gtex_pairwise.svg ){#fig:gtex-pairwise}
-
-![
-GTEx binary tissue prediction after signal removal
-](./images/gtex_pairwise_signal_removed.svg ){#fig:gtex-pairwise}
-
-### Pretraining 
-A common usage pattern in machine learning is to train models on a general dataset then fine-tune them on a dataset of interest.
-To ensure that our results weren't made irrelevant by different behavior in the pretraining context, we examined the performance of the models with and without pretraining (Fig. @fig:pretrain).
-We split our data into three sets: pretraining, training, and validation (Fig. @fig:workflow bottom), then trained two identically initialized copies of each model.
-One copy was trained solely on the training data, while the other was trained on the pretraining data then fine-tuned on the training data.
-
-The pretrained models showed high performance even when trained with small amounts of data from the training set.
-However, the nonlinear models did not have a greater performance gain from pretraining than logistic regression, and the balanced accuracy was similar across models.
-In fact, all models showed lower performance than when using the full training data, as models forget information from previous runs during fine-tuning [@doi:10/ckpftf].
-
-![
-Performance of models with and without pretraining
-](./images/recount_pretraining.svg ){#fig:pretrain}
-
-### Sample splitting
-We considered it possible that our results were an artifact of our method of dataset splitting, and set out to test it.
-There is a common method of data splitting we refer to as samplewise splitting (see Methods) that leaks information between the train and validation sets when used in transcriptomic tasks.
-To avoid this data leakage, we split the dataset at the study level in our Recount3 analyses.
-We found that there is in fact a large degree of performance inflation evident when comparing the sample-split results to the study-split results in the Recount3 multiclass setting (Fig. @fig:splitting).
-While this supports our decision to use study-level splitting, the relative performance of each model stays the same regardless of data splitting technique.
-
-![
-Performance of models with different data splitting
-](./images/recount_multiclass_sample_split.svg ){#fig:splitting}
-
+Performance of model on GTEx classification problems. The top figures show the difference in training models in the multiclass setting with and without signal removal, while the bottom figures show binary classification with and without signal removal.
+](./images/gtex_combined.svg ){#fig:gtex}
 
 ### Sex prediction validation
 To rule out the possibility that our findings were specific to tissue prediction tasks, we examined models' ability to predict metadata-derived sex (Fig. @fig:sex-prediction).
@@ -245,7 +204,24 @@ This result demonstrates that despite the compelling accuracy of linear models, 
 
 ![
 Metadata sex prediction
-](./images/sex_prediction_studywise.svg ){#fig:splitting}
+](./images/sex_prediction.svg ){#fig:sex-prediction}
+
+### Pretraining 
+A common usage pattern in machine learning is to train models on a general dataset then fine-tune them on a dataset of interest.
+To ensure that our results weren't made irrelevant by different behavior in the pretraining context, we examined the performance of the models with and without pretraining (Supp. fig TODO).
+We split our data into three sets: pretraining, training, and validation (Fig. @fig:workflow bottom), then trained two identically initialized copies of each model.
+One copy was trained solely on the training data, while the other was trained on the pretraining data then fine-tuned on the training data.
+
+The pretrained models showed high performance even when trained with small amounts of data from the training set.
+However, the nonlinear models did not have a greater performance gain from pretraining than logistic regression, and the balanced accuracy was similar across models.
+In fact, all models showed lower performance than when using the full training data, as models forget information from previous runs during fine-tuning [@doi:10/ckpftf].
+
+### Sample splitting
+We considered it possible that our results were an artifact of our method of dataset splitting, and set out to test it.
+There is a common method of data splitting we refer to as samplewise splitting (see Methods) that leaks information between the train and validation sets when used in transcriptomic tasks.
+To avoid this data leakage, we split the dataset at the study level in our Recount3 analyses.
+We found that there is in fact a large degree of performance inflation evident when comparing the sample-split results to the study-split results in the Recount3 multiclass setting (Supp Fig. @fig:splitting).
+While this supports our decision to use study-level splitting, the relative performance of each model stays the same regardless of data splitting technique.
 
 
 ## Methods
@@ -440,6 +416,16 @@ We found that it generally outperformed the other models (supp. fig. @fig:sklear
 ![                                                                                                                                                                                                          
 TODO description, build figure
 ](./images/sklearn.svg "Sklearn comparison"){#fig:sklearn} 
+
+### Recount3 Pretraining Figure
+![                                                                                                                                                                                                          
+Performance of Recount3 multiclass prediction with pretraining
+](./images/recount_pretraining.svg "Pretraining"){#fig:pretrain} 
+
+### Samplewise splitting
+![                                                                                                                                                                                                          
+Performance of models with different data splitting                                                                                                                                                         
+](./images/recount_multiclass_sample_split.svg ){#fig:splitting}
 
 
 ## References {.page_break_before}
