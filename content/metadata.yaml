@@ -1,18 +1,40 @@
 ---
 title: "The Effects of Nonlinear Signal on Expression-Based Prediction Performance"
 keywords:
-  - markdown
-  - publishing
-  - manubot
+  - machine learning
+  - transcriptomics
+  - tissue prediction
+  - nonlinear models
 lang: en-US
 authors:
   - github: ben-heil
-    name: Benjamin Heil
+    name: Benjamin J. Heil
     initials: BJH
     orcid: 0000-0002-2811-1031
     twitter: autobencoder
     email: benheil@pennmedicine.upenn.edu
     affiliations:
       - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
+    funders:
+      - Grant XXXXXXXX
+  - github: jjc2718
+    name: Jake Crawford
+    initials: JC
+    orcid: 0000-0001-6207-0782
+    twitter: jjc2718
+    email: jjc2718@gmail.com
+    affiliations:
+      - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
+    funders:
+      - Grant XXXXXXXX
+  - github: cgreene
+    name: Casey S. Greene
+    initials: CSG
+    orcid: 0000-0001-8713-9213
+    twitter: greenescientist
+    email: casey.s.greene@cuanschutz.edu
+    affiliations:
+      - Department of Pharmacology, University of Colorado School of Medicine
+      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine
     funders:
       - Grant XXXXXXXX
