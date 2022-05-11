@@ -1,6 +1,4 @@
-# Automated scholarly manuscripts on GitHub
-
-<!-- usage note: edit the H1 title above to personalize the manuscript -->
+# The Effects of Nonlinear Signal on Expression-Based Prediction Performance
 
 [![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://greenelab.github.io/linear_models_manuscript/)
 [![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://greenelab.github.io/linear_models_manuscript/manuscript.pdf)
@@ -9,9 +7,11 @@
 ## Manuscript description
 
 <!-- usage note: edit this section. -->
-
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+Transcriptomic data contains a wealth of information about a person’s biology, so predicting phenotypes from RNA-seq data is a promising field of research.
+However, there are two conflicting ideas in the literature regarding the utility of nonlinear models.
+One theory says the paths linking gene expression to phenotypes are complex and nonlinear models like neural networks should be more capable of learning that complexity, while the other observers that when using expression to make predictions about phenotypes, linear models seem to do as well as or better than nonlinear ones in many cases.
+This paper demonstrates that both theories have merit by evaluating linear and nonlinear models on a series of representative phenotype prediction tasks.
+We also show that even in cases where linear models perform equivalently to nonlinear ones, there is predictive nonlinear signal in the data.
 
 ## Manubot
 
