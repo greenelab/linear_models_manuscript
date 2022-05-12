@@ -8,13 +8,13 @@
       "nonlinear models"
     ],
     "lang": "en-US",
-    "date-meta": "2022-05-11",
+    "date-meta": "2022-05-12",
     "author-meta": [
       "Benjamin J. Heil",
       "Jake Crawford",
       "Casey S. Greene"
     ],
-    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta name=\"dc.title\" content=\"The Effects of Nonlinear Signal on Expression-Based Prediction Performance\" />\n<meta name=\"citation_title\" content=\"The Effects of Nonlinear Signal on Expression-Based Prediction Performance\" />\n<meta property=\"og:title\" content=\"The Effects of Nonlinear Signal on Expression-Based Prediction Performance\" />\n<meta property=\"twitter:title\" content=\"The Effects of Nonlinear Signal on Expression-Based Prediction Performance\" />\n<meta name=\"dc.date\" content=\"2022-05-11\" />\n<meta name=\"citation_publication_date\" content=\"2022-05-11\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Benjamin J. Heil\" />\n<meta name=\"citation_author_institution\" content=\"Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-2811-1031\" />\n<meta name=\"twitter:creator\" content=\"@autobencoder\" />\n<meta name=\"citation_author\" content=\"Jake Crawford\" />\n<meta name=\"citation_author_institution\" content=\"Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-6207-0782\" />\n<meta name=\"twitter:creator\" content=\"@jjc2718\" />\n<meta name=\"citation_author\" content=\"Casey S. Greene\" />\n<meta name=\"citation_author_institution\" content=\"Department of Pharmacology, University of Colorado School of Medicine\" />\n<meta name=\"citation_author_institution\" content=\"Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-8713-9213\" />\n<meta name=\"twitter:creator\" content=\"@greenescientist\" />\n<link rel=\"canonical\" href=\"https://greenelab.github.io/linear_models_manuscript/\" />\n<meta property=\"og:url\" content=\"https://greenelab.github.io/linear_models_manuscript/\" />\n<meta property=\"twitter:url\" content=\"https://greenelab.github.io/linear_models_manuscript/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://greenelab.github.io/linear_models_manuscript/\" />\n<meta name=\"citation_pdf_url\" content=\"https://greenelab.github.io/linear_models_manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://greenelab.github.io/linear_models_manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://greenelab.github.io/linear_models_manuscript/v/e62a5c7cd199d438f26589dbef13d3ef2322ccad/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://greenelab.github.io/linear_models_manuscript/v/e62a5c7cd199d438f26589dbef13d3ef2322ccad/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://greenelab.github.io/linear_models_manuscript/v/e62a5c7cd199d438f26589dbef13d3ef2322ccad/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->",
+    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta name=\"dc.title\" content=\"The Effects of Nonlinear Signal on Expression-Based Prediction Performance\" />\n<meta name=\"citation_title\" content=\"The Effects of Nonlinear Signal on Expression-Based Prediction Performance\" />\n<meta property=\"og:title\" content=\"The Effects of Nonlinear Signal on Expression-Based Prediction Performance\" />\n<meta property=\"twitter:title\" content=\"The Effects of Nonlinear Signal on Expression-Based Prediction Performance\" />\n<meta name=\"dc.date\" content=\"2022-05-12\" />\n<meta name=\"citation_publication_date\" content=\"2022-05-12\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Benjamin J. Heil\" />\n<meta name=\"citation_author_institution\" content=\"Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-2811-1031\" />\n<meta name=\"twitter:creator\" content=\"@autobencoder\" />\n<meta name=\"citation_author\" content=\"Jake Crawford\" />\n<meta name=\"citation_author_institution\" content=\"Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-6207-0782\" />\n<meta name=\"twitter:creator\" content=\"@jjc2718\" />\n<meta name=\"citation_author\" content=\"Casey S. Greene\" />\n<meta name=\"citation_author_institution\" content=\"Department of Pharmacology, University of Colorado School of Medicine\" />\n<meta name=\"citation_author_institution\" content=\"Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0001-8713-9213\" />\n<meta name=\"twitter:creator\" content=\"@greenescientist\" />\n<link rel=\"canonical\" href=\"https://greenelab.github.io/linear_models_manuscript/\" />\n<meta property=\"og:url\" content=\"https://greenelab.github.io/linear_models_manuscript/\" />\n<meta property=\"twitter:url\" content=\"https://greenelab.github.io/linear_models_manuscript/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://greenelab.github.io/linear_models_manuscript/\" />\n<meta name=\"citation_pdf_url\" content=\"https://greenelab.github.io/linear_models_manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://greenelab.github.io/linear_models_manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://greenelab.github.io/linear_models_manuscript/v/8e1e1003033c078c6fe7db79f32382d4792bf563/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://greenelab.github.io/linear_models_manuscript/v/8e1e1003033c078c6fe7db79f32382d4792bf563/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://greenelab.github.io/linear_models_manuscript/v/8e1e1003033c078c6fe7db79f32382d4792bf563/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->",
     "bibliography": [
       "content/manual-references.json"
     ],
@@ -24,7 +24,7 @@
     "manubot-clear-requests-cache": false
   },
   "manubot": {
-    "date": "May 11, 2022",
+    "date": "May 12, 2022",
     "randomize_author_order": false,
     "authors": [
       {
@@ -100,19 +100,19 @@
       "repo_slug": "greenelab/linear_models_manuscript",
       "repo_owner": "greenelab",
       "repo_name": "linear_models_manuscript",
-      "commit": "e62a5c7cd199d438f26589dbef13d3ef2322ccad",
-      "triggering_commit": "e62a5c7cd199d438f26589dbef13d3ef2322ccad",
-      "build_url": "https://github.com/greenelab/linear_models_manuscript/commit/e62a5c7cd199d438f26589dbef13d3ef2322ccad/checks",
-      "job_url": "https://github.com/greenelab/linear_models_manuscript/actions/runs/2309883361"
+      "commit": "8e1e1003033c078c6fe7db79f32382d4792bf563",
+      "triggering_commit": "8e1e1003033c078c6fe7db79f32382d4792bf563",
+      "build_url": "https://github.com/greenelab/linear_models_manuscript/commit/8e1e1003033c078c6fe7db79f32382d4792bf563/checks",
+      "job_url": "https://github.com/greenelab/linear_models_manuscript/actions/runs/2314117795"
     },
     "html_url": "https://greenelab.github.io/linear_models_manuscript/",
     "pdf_url": "https://greenelab.github.io/linear_models_manuscript/manuscript.pdf",
-    "html_url_versioned": "https://greenelab.github.io/linear_models_manuscript/v/e62a5c7cd199d438f26589dbef13d3ef2322ccad/",
-    "pdf_url_versioned": "https://greenelab.github.io/linear_models_manuscript/v/e62a5c7cd199d438f26589dbef13d3ef2322ccad/manuscript.pdf",
+    "html_url_versioned": "https://greenelab.github.io/linear_models_manuscript/v/8e1e1003033c078c6fe7db79f32382d4792bf563/",
+    "pdf_url_versioned": "https://greenelab.github.io/linear_models_manuscript/v/8e1e1003033c078c6fe7db79f32382d4792bf563/manuscript.pdf",
     "manubot_version": "0.5.2",
     "rootstock_commit": "8086a3985300c203353acbe44a2fc908f677d563",
     "manuscript_stats": {
-      "word_count": 3980
+      "word_count": 3948
     }
   }
 }
