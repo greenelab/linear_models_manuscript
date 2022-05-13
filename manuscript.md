@@ -6,7 +6,7 @@ keywords:
 - tissue prediction
 - nonlinear models
 lang: en-US
-date-meta: '2022-05-12'
+date-meta: '2022-05-13'
 author-meta:
 - Benjamin J. Heil
 - Jake Crawford
@@ -21,8 +21,8 @@ header-includes: |-
   <meta name="citation_title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="og:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="twitter:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
-  <meta name="dc.date" content="2022-05-12" />
-  <meta name="citation_publication_date" content="2022-05-12" />
+  <meta name="dc.date" content="2022-05-13" />
+  <meta name="citation_publication_date" content="2022-05-13" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -48,9 +48,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/linear_models_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/8e1e1003033c078c6fe7db79f32382d4792bf563/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/8e1e1003033c078c6fe7db79f32382d4792bf563/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/8e1e1003033c078c6fe7db79f32382d4792bf563/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/98b726f31b0926d64c76ff6b5656003171b45ea7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/98b726f31b0926d64c76ff6b5656003171b45ea7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/98b726f31b0926d64c76ff6b5656003171b45ea7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -72,10 +72,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/linear_models_manuscript/v/8e1e1003033c078c6fe7db79f32382d4792bf563/))
+([permalink](https://greenelab.github.io/linear_models_manuscript/v/98b726f31b0926d64c76ff6b5656003171b45ea7/))
 was automatically generated
-from [greenelab/linear_models_manuscript@8e1e100](https://github.com/greenelab/linear_models_manuscript/tree/8e1e1003033c078c6fe7db79f32382d4792bf563)
-on May 12, 2022.
+from [greenelab/linear_models_manuscript@98b726f](https://github.com/greenelab/linear_models_manuscript/tree/98b726f31b0926d64c76ff6b5656003171b45ea7)
+on May 13, 2022.
 </em></small>
 
 ## Authors
@@ -173,8 +173,8 @@ Schematic of the model analysis workflow. We evaluate three models on multiple c
 
 ### Linear and nonlinear models have similar performance in many tasks
 We selected expression data from GTEx [@doi:10.1038/ng.2653] to determine whether linear and nonlinear models performed similarly, as it is a relatively well understood dataset with consistent experimental design across samples.
-We first trained our models to do binary classification on pairs of the five most common tissues in the dataset.
-Likely due to the clean nature of the data, all models were able to perform perfectly on the binary classification tasks (fig. @fig:prediction_combined top right).
+We first trained our models to differentiate between tissue types on pairs of the five most common tissues in the dataset.
+Likely due to the clean nature of the data, all models were able to perform perfectly on these binary classification tasks (fig. @fig:prediction_combined top right).
 
 Because the binary classification task was too easy to determine any difference between models, evaluated the models on a more challenging task.
 Namely, we tested the models on their ability to perform multiclass classification on all 31 tissues present in the dataset.
@@ -190,7 +190,7 @@ We used the same experimental setup as in our other binary prediction tasks to t
 In this setting we found that while the models all performed similarly, the nonlinear models tended to have a slight edge over the linear one.
 
 ![
-Performance of models across four classification tasks
+Performance of models across four classification tasks. In each panel, confidence intervals show mean and standard error across 5 folds of studywise cross-validation.
 ](./images/full_signal_combined.svg ){#fig:prediction_combined}
 
 ### There is predictive nonlinear signal in biological problems
@@ -198,12 +198,12 @@ One can imagine a world where all the signal relevant to tissue prediction is li
 If that were the case, nonlinear models like neural networks would fail to give any advantage in a prediction problem.
 To determine whether there is nonlinear signal in our tissue prediction tasks learnable by our neural nets, we used Limma [@doi:10.1093/nar/gkv007] to remove the linear signal associated with each tissue.
 
-We began by simulating three datasets to better understand the patterns we would expect to see for different types of signal.
-Our initial dataset simulated both linear and nonlinear signal by generating two types of features: half of the features with a linear dividing line between the simulated classes and half with a nonlinear dividing line.
+We began by simulating three datasets to better understand model performance for a variety of linear or nonlinear data generating processes.
+Our initial dataset simulated both linear and nonlinear signal by generating two types of features: half of the features with a linear dividing line between the simulated classes and half with a nonlinear dividing line (see [Methods](#methods) for more detail).
 After training to classify the simulated dataset, all models effectively predicted the simulated classes.
 After removing the linear signal from the dataset, nonlinear models remained able to predict the correct classes, but logistic regression was no better than random (fig @fig:simulation middle).
 
-To show the models' performance in data with only linear signal, we generated another simulated dataset consisting solely of features with a linear dividing line between the classes.
+To measure the models' performance in data with only linear signal, we generated another simulated dataset consisting solely of features with a linear dividing line between the classes.
 As before, all models were able to predict the different classes well.
 However, once the linear signal was removed, all models had accuracy no better than random guessing (fig @fig:simulation left).
 That the nonlinear models only achieved baseline accuracy also indicated that the signal removal method was not injecting nonlinear signal into data where nonlinear signal did not exist.
@@ -213,7 +213,7 @@ As expected, the models all performed at baseline accuracy both before and after
 This finding supported our decision to perform signal removal on the training and validation sets separately, as removing the signal in the full dataset may introduce predictive signal into this setting (supp. fig. @fig:split-signal-correction).
 
 ![
-Performance of models in binary classification of simulated data before and after signal removal
+Performance of models in binary classification of simulated data before and after signal removal. Dotted lines indicate expected performance for a naive baseline classifier that predicts the most frequent class.
 ](./images/simulated_data_combined.svg ){#fig:simulation}
 
 When we ran our models on the signal-removed data from GTEx and Recount3, we found that the neural nets performed better than the baseline while logistic regression did not (fig. @fig:signal_removed top right, supp. fig. @fig:recount-binary-combined).
@@ -225,11 +225,11 @@ In each of the settings, the models performed less well than when run on data wi
 Performance of models across four classification tasks before and after signal removal
 ](./images/signal_removed_combined.svg ){#fig:signal_removed}
 
-To verify that our results were not an artifact of how we assigned samples to cross-validation folds, we compared the method we used to assign folds with one called samplewise splitting.
-Samplewise splitting (see Methods) is common in machine learning but leaks information between the train and validation sets when used in transcriptomic tasks.
+To verify that our results were not an artifact of how we assigned samples to cross-validation folds, we compared the method we used to assign folds with an alternate method called samplewise splitting.
+Samplewise splitting (see [Methods](#methods)) is common in machine learning but leaks information between the train and validation sets when used in transcriptomic tasks.
 To avoid this data leakage, we split the dataset at the study level when that information was available.
-We found that there is, in fact, a significant degree of performance inflation evident when comparing the sample-split results to the study-split results in the Recount3 multiclass setting (supp. fig. @fig:splitting).
-While this supports our decision to use study-level splitting, the relative performance of each model stays the same regardless of the data splitting technique.
+We found that there is, in fact, a significant degree of performance inflation evident when comparing the samplewise split results to the studywise split results in the Recount3 multiclass setting (supp. fig. @fig:splitting).
+While this supports our decision to use studywise splitting, the relative performance of each model stays the same regardless of the data splitting technique.
 
 Another common usage pattern in machine learning is training models on a general dataset and fine-tuning them on a dataset of interest.
 To ensure that our results were not made irrelevant by different behavior in the pretraining context, we examined the performance of the models with and without pretraining (supp. fig @fig:pretrain).
@@ -327,6 +327,8 @@ From initiating data download to finishing all analyses and generating all figur
 In the Recount3 setting, the multi-tissue classification analyses were trained on the 21 tissues (see Supp. Methods) that had at least ten studies in the dataset.
 Each model was trained to determine which of the 21 tissues a given expression sample corresponded to.
 The models' performance was then measured based on the balanced accuracy across all classes.
+
+<!-- up to you but if it were me, i'd describe how balanced accuracy works and why it's the right choice in more detail here, ideally with a bit of math. not all readers/reviewers will be familiar off the top of their heads -->
 
 The binary classification setting was similar.
 The five tissues with the most studies (brain, blood, breast, stem cell, and cervix) were compared against each other pairwise.

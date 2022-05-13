@@ -32,13 +32,13 @@ RTX
 runtime
 Ryzen
 Samplewise
-scRNA
+scrna
 SMTS
 Snakemake
 studywise
 subtyping
 TPM
-Transcriptomic
+transcriptomic
 Xeon
 xt
 XXXXXXXX
