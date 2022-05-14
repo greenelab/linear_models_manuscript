@@ -19,6 +19,7 @@ jjc
 kilobase
 learnable
 Limma
+loess
 multiclass
 nonlinearities
 NumPy
@@ -31,7 +32,7 @@ removeBatchEffect
 RTX
 runtime
 Ryzen
-Samplewise
+samplewise
 scrna
 SMTS
 Snakemake

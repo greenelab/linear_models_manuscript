@@ -6,7 +6,7 @@ keywords:
 - tissue prediction
 - nonlinear models
 lang: en-US
-date-meta: '2022-05-13'
+date-meta: '2022-05-14'
 author-meta:
 - Benjamin J. Heil
 - Jake Crawford
@@ -21,8 +21,8 @@ header-includes: |-
   <meta name="citation_title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="og:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="twitter:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
-  <meta name="dc.date" content="2022-05-13" />
-  <meta name="citation_publication_date" content="2022-05-13" />
+  <meta name="dc.date" content="2022-05-14" />
+  <meta name="citation_publication_date" content="2022-05-14" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -48,9 +48,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/linear_models_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/98b726f31b0926d64c76ff6b5656003171b45ea7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/98b726f31b0926d64c76ff6b5656003171b45ea7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/98b726f31b0926d64c76ff6b5656003171b45ea7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/60524839e6d285e6d50c03d0b1923e5d81585df6/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/60524839e6d285e6d50c03d0b1923e5d81585df6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/60524839e6d285e6d50c03d0b1923e5d81585df6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -72,10 +72,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/linear_models_manuscript/v/98b726f31b0926d64c76ff6b5656003171b45ea7/))
+([permalink](https://greenelab.github.io/linear_models_manuscript/v/60524839e6d285e6d50c03d0b1923e5d81585df6/))
 was automatically generated
-from [greenelab/linear_models_manuscript@98b726f](https://github.com/greenelab/linear_models_manuscript/tree/98b726f31b0926d64c76ff6b5656003171b45ea7)
-on May 13, 2022.
+from [greenelab/linear_models_manuscript@6052483](https://github.com/greenelab/linear_models_manuscript/tree/60524839e6d285e6d50c03d0b1923e5d81585df6)
+on May 14, 2022.
 </em></small>
 
 ## Authors
@@ -190,7 +190,7 @@ We used the same experimental setup as in our other binary prediction tasks to t
 In this setting we found that while the models all performed similarly, the nonlinear models tended to have a slight edge over the linear one.
 
 ![
-Performance of models across four classification tasks. In each panel, confidence intervals show mean and standard error across 5 folds of studywise cross-validation.
+Performance of models across four classification tasks. In each panel the loess curve and its 95% confidence interval are plotted based on points from three seeds, ten data subsets, and five folds of studywise cross-validation (for a total of 150 points per model per panel).
 ](./images/full_signal_combined.svg ){#fig:prediction_combined}
 
 ### There is predictive nonlinear signal in biological problems
@@ -326,11 +326,12 @@ From initiating data download to finishing all analyses and generating all figur
 **Recount3 tissue prediction**  
 In the Recount3 setting, the multi-tissue classification analyses were trained on the 21 tissues (see Supp. Methods) that had at least ten studies in the dataset.
 Each model was trained to determine which of the 21 tissues a given expression sample corresponded to.
-The models' performance was then measured based on the balanced accuracy across all classes.
 
-<!-- up to you but if it were me, i'd describe how balanced accuracy works and why it's the right choice in more detail here, ideally with a bit of math. not all readers/reviewers will be familiar off the top of their heads -->
+To address class imbalance, our models' performance was then measured based on the balanced accuracy across all classes.
+Unlike raw accuracy, balanced accuracy (the mean across all classes of the per-class recall) isn't predominantly determined by performance on the largest class in an imbalanced class setting.
+For example, in a binary classification setting with 9 instances of class A and 1 instance of class B, successfully predicting 8 of the 9 instances of class A and none of class B yields an accuracy of 0.8 but a balanced accuracy of 0.44.
 
-The binary classification setting was similar.
+The binary classification setting was similar to the multi-class one.
 The five tissues with the most studies (brain, blood, breast, stem cell, and cervix) were compared against each other pairwise.
 The expression used in this setting was the set of samples labeled as one of the two tissues being compared.
 
