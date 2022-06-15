@@ -35,9 +35,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="8.28"
-     inkscape:cx="50.25"
-     inkscape:cy="276.21503"
+     inkscape:zoom="2.9274221"
+     inkscape:cx="230.38245"
+     inkscape:cy="208.12994"
      inkscape:window-x="67"
      inkscape:window-y="655"
      inkscape:window-maximized="1"
@@ -61,7 +61,7 @@
                 <dc:title>Matplotlib v3.5.1, https://matplotlib.org/</dc:title>
               </cc:Agent>
             </dc:creator>
-            <dc:title></dc:title>
+            <dc:title />
           </cc:Work>
         </rdf:RDF>
       </metadata>
@@ -16183,4 +16183,63 @@
       </defs>
     </g>
   </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:32px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;"
+     x="9.9063272"
+     y="23.468063"
+     id="text13203"><tspan
+       sodipodi:role="line"
+       id="tspan13201"
+       style="stroke-linecap:butt;stroke-linejoin:round;font-size:32px;"
+       x="9.9063272"
+       y="58.858688" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:26.66666603px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
+     x="1.7079877"
+     y="19.710491"
+     id="text13207"><tspan
+       sodipodi:role="line"
+       id="tspan13205"
+       style="font-size:18.66666667px;stroke-linecap:butt;stroke-linejoin:round"
+       x="1.7079877"
+       y="19.710491">A</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:26.66666603px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
+     x="0.22347765"
+     y="174.66008"
+     id="text13207-0"
+     inkscape:transform-center-x="4.0991697"
+     inkscape:transform-center-y="-31.085371"><tspan
+       sodipodi:role="line"
+       id="tspan13205-4"
+       style="font-size:18.66666667px;stroke-linecap:butt;stroke-linejoin:round"
+       x="0.22347765"
+       y="174.66008">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:26.66666603px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
+     x="208.00229"
+     y="174.70462"
+     id="text13207-0-8"
+     inkscape:transform-center-x="4.0991697"
+     inkscape:transform-center-y="-31.085371"><tspan
+       sodipodi:role="line"
+       id="tspan13205-4-8"
+       style="font-size:18.66666667px;stroke-linecap:butt;stroke-linejoin:round"
+       x="208.00229"
+       y="174.70462">D</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:26.66666603px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
+     x="207.93147"
+     y="18.946596"
+     id="text13207-8"><tspan
+       sodipodi:role="line"
+       id="tspan13205-9"
+       style="font-size:18.66666667px;stroke-linecap:butt;stroke-linejoin:round"
+       x="207.93147"
+       y="18.946596">B</tspan></text>
 </svg>
