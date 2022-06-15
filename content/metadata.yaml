@@ -16,7 +16,7 @@ authors:
     affiliations:
       - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
     funders:
-      - Grant XXXXXXXX
+      - The Gordon and Betty Moore Foundation (GBMF4552)
   - github: jjc2718
     name: Jake Crawford
     initials: JC
@@ -26,7 +26,8 @@ authors:
     affiliations:
       - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
     funders:
-      - Grant XXXXXXXX
+      - The Gordon and Betty Moore Foundation (GBMF4552)
+      - The National Human Genome Research Institute (R01 HG10067)
   - github: cgreene
     name: Casey S. Greene
     initials: CSG
@@ -37,4 +38,5 @@ authors:
       - Department of Pharmacology, University of Colorado School of Medicine
       - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine
     funders:
-      - Grant XXXXXXXX
+      - The Gordon and Betty Moore Foundation (GBMF4552)
+      - The National Human Genome Research Institute (R01 HG10067)
