@@ -31,7 +31,7 @@ phenotypes
 pre
 pretrain
 pretrained
-Pretraining
+pretraining
 ReLU
 removeBatchEffect
 RTX

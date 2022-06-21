@@ -6,7 +6,7 @@ keywords:
 - tissue prediction
 - nonlinear models
 lang: en-US
-date-meta: '2022-06-15'
+date-meta: '2022-06-21'
 author-meta:
 - Benjamin J. Heil
 - Jake Crawford
@@ -21,8 +21,8 @@ header-includes: |-
   <meta name="citation_title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="og:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="twitter:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
-  <meta name="dc.date" content="2022-06-15" />
-  <meta name="citation_publication_date" content="2022-06-15" />
+  <meta name="dc.date" content="2022-06-21" />
+  <meta name="citation_publication_date" content="2022-06-21" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -48,9 +48,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/linear_models_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/75e2411c3892365982bda25861b6a7d8f252e865/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/75e2411c3892365982bda25861b6a7d8f252e865/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/75e2411c3892365982bda25861b6a7d8f252e865/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -72,10 +72,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/linear_models_manuscript/v/75e2411c3892365982bda25861b6a7d8f252e865/))
+([permalink](https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/))
 was automatically generated
-from [greenelab/linear_models_manuscript@75e2411](https://github.com/greenelab/linear_models_manuscript/tree/75e2411c3892365982bda25861b6a7d8f252e865)
-on June 15, 2022.
+from [greenelab/linear_models_manuscript@1e66734](https://github.com/greenelab/linear_models_manuscript/tree/1e66734d3136207032765582b2913ff5e59767ab)
+on June 21, 2022.
 </em></small>
 
 ## Authors
@@ -143,15 +143,15 @@ One theory draws on prior biological understanding: the paths linking gene expre
 Unlike purely linear models such as logistic regression, non-linear models should learn more sophisticated representations of the relationships between expression and phenotype.
 Accordingly, many have used non-linear models to learn representations useful for making predictions of phenotypes from gene expression [@doi:10.1128/mSystems.00025-15; @doi:10.1016/j.cmpb.2018.10.004; @doi:10.1186/s12859-017-1984-2].
 
-The other supposes that even high-dimensional complex systems may be well predicted by linear dividing lines.
+The other supposes that even high-dimensional complex systems may have linear decision boundaries.
 This is supported empirically: linear models seem to do as well as or better than non-linear ones in many cases [@doi:10.1186/s12859-020-3427-8].
 While papers of this sort are harder to come by — perhaps scientists do not tend to write papers about how their deep learning model was worse than logistic regression — other complex biological problems have also seen linear models prove equivalent to non-linear ones [@doi:10.1016/j.jclinepi.2019.02.004; @doi:10.1038/s41467-020-18037-z].
 
 We design experiments to ablate linear signal and find merit to both hypotheses.
 We construct a system of binary and multi-class classification problems on the GTEx and Recount3 compendia [@doi:10.1038/ng.2653;@doi:10.1186/s13059-021-02533-6] that shows linear and non-linear models have similar accuracy on several prediction tasks.
 However, upon removing the linear signals relating the phenotype to gene expression we find non-linear signal in the data even when the linear models outperform the non-linear ones.
-Given the unexpected nature of these findings, we evaluated independent tasks, examined different problem formulations, and verified our models' behavior with simulated data.
-The models' results were consistent across each setting, and the models themselves were comparable, as they used the same training and hyperparameter optimization processes [@pmid:30963075].
+Given the unexpected nature of these findings, we evaluate independent tasks, examine different problem formulations, and verify our models' behavior with simulated data.
+The models' results are consistent across each setting, and the models themselves are comparable, as they use the same training and hyperparameter optimization processes [@pmid:30963075].
 
 In reconciling these two ostensibly conflicting theories, we confirm the importance of implementing and optimizing a linear baseline model before deploying a complex non-linear approach.
 While non-linear models may outperform simpler models at the limit of infinite data, they do not necessarily do so even when trained on the largest datasets publicly available today.
@@ -191,15 +191,16 @@ Performance of models across four classification tasks. In each panel the loess 
 ](./images/full_signal_combined.svg ){#fig:prediction_combined}
 
 ### There is predictive non-linear signal in transcriptomic data
-Our results to this point are consistent with a model where the predictive signal present in transcriptomic data is entirely linear.
+Our results to this point are consistent with a world where the predictive signal present in transcriptomic data is entirely linear.
 If that were the case, non-linear models like neural networks would fail to give any substantial advantage.
+However, based on past results we expect there to be relevant nonlinear biological signal [@doi:10.1101/2022.06.15.496326].
 To get a clearer idea of what that would look like, we simulated three datasets to better understand model performance for a variety of data generating processes.
-We created data with both linear and non-linear signal by generating two types of features: half of the features with a linear dividing line between the simulated classes and half with a non-linear dividing line (see [Methods](#methods) for more detail).
+We created data with both linear and non-linear signal by generating two types of features: half of the features with a linear decision boundary between the simulated classes and half with a non-linear decision boundary (see [Methods](#methods) for more details).
 After training to classify the simulated dataset, all models effectively predicted the simulated classes.
 To determine whether or not there was non-linear signal, we then used Limma [@doi:10.1093/nar/gkv007] to remove the linear signal associated with the endpoint being predicted.
 After removing the linear signal from the dataset, non-linear models correctly predicted classes, but logistic regression performed no better than random (fig @fig:simulation).
 
-To confirm that non-linear signal was key to the performance of non-linear methods, we generated another simulated dataset consisting solely of features with a linear dividing line between the classes.
+To confirm that non-linear signal was key to the performance of non-linear methods, we generated another simulated dataset consisting solely of features with a linear decision boundary between the classes.
 As before, all models were able to predict the different classes well.
 However, once the linear signal was removed, all models performed no better than random guessing (fig @fig:simulation).
 That the non-linear models only achieved baseline accuracy also indicated that the signal removal method was not injecting non-linear signal into data where non-linear signal did not exist.
@@ -356,7 +357,8 @@ These results also held in altered problem settings, such as using a pretraining
 This consistent presence of non-linear signal demonstrated that the similarity in performance across model types was not due to our problem domains having solely linear signals.
 
 Given that non-linear signal is present in our problem domains, why doesn't that signal allow non-linear models to make better predictions?
-It is possible that the non-linear signal is either entirely redundant with the linear signal or unreliable enough that non-linear methods prioritize learning the linear signal when it is present.
+Perhaps the signal is simply drowned out.
+Recent work has shown that only a fraction of a percent of gene-gene relationships have strong non-linear correlation despite a weak linear one [@doi:10.1101/2022.06.15.496326].
 
 One limitation of our study is that the results likely do not hold in an infinite data setting.
 Deep learning models have been shown to solve complex problems in biology and tend to significantly outperform linear models when given enough data.
@@ -370,6 +372,9 @@ While we show that non-linear signal is not always helpful in tissue or sex pred
 Ultimately, our results show that task-relevant non-linear signal in the data, which we confirm is present, does not necessarily lead non-linear models to outperform linear ones.
 Additionally, our results suggest that scientists making predictions from expression data should always include simple linear models as a baseline to determine whether more complex models are warranted.
 
+
+### Code and Data Availability
+The code, data, and model weights to reproduce this work can be found at https://github.com/greenelab/linear_signal.
 
 ### Acknowledgements
 We would like to thank Alexandra Lee and Jake Crawford for reviewing code that went into this project.

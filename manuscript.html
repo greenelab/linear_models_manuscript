@@ -7,7 +7,7 @@
   <meta name="author" content="Benjamin J. Heil" />
   <meta name="author" content="Jake Crawford" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2022-06-15" />
+  <meta name="dcterms.date" content="2022-06-21" />
   <meta name="keywords" content="machine learning, transcriptomics, tissue prediction, nonlinear models" />
   <title>The Effects of Nonlinear Signal on Expression-Based Prediction Performance</title>
   <style>
@@ -46,8 +46,8 @@
   <meta name="citation_title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="og:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="twitter:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
-  <meta name="dc.date" content="2022-06-15" />
-  <meta name="citation_publication_date" content="2022-06-15" />
+  <meta name="dc.date" content="2022-06-21" />
+  <meta name="citation_publication_date" content="2022-06-21" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -73,9 +73,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/linear_models_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/75e2411c3892365982bda25861b6a7d8f252e865/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/75e2411c3892365982bda25861b6a7d8f252e865/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/75e2411c3892365982bda25861b6a7d8f252e865/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/linear_models_manuscript/v/75e2411c3892365982bda25861b6a7d8f252e865/">permalink</a>)
+(<a href="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/linear_models_manuscript/tree/75e2411c3892365982bda25861b6a7d8f252e865">greenelab/linear_models_manuscript@75e2411</a>
-on June 15, 2022.
+from <a href="https://github.com/greenelab/linear_models_manuscript/tree/1e66734d3136207032765582b2913ff5e59767ab">greenelab/linear_models_manuscript@1e66734</a>
+on June 21, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -150,14 +150,14 @@ It makes sense, then, that neural networks are frequently being used to build pr
 One theory draws on prior biological understanding: the paths linking gene expression to phenotypes are complex <span class="citation" data-cites="9O6X3Dmj 11pMMG4s">[<a href="#ref-9O6X3Dmj" role="doc-biblioref">10</a>,<a href="#ref-11pMMG4s" role="doc-biblioref">11</a>]</span>, and non-linear models like neural networks should be more capable of learning that complexity.
 Unlike purely linear models such as logistic regression, non-linear models should learn more sophisticated representations of the relationships between expression and phenotype.
 Accordingly, many have used non-linear models to learn representations useful for making predictions of phenotypes from gene expression <span class="citation" data-cites="1CFhfCyWN uXRnjUvq 19wuAzYvo">[<a href="#ref-1CFhfCyWN" role="doc-biblioref">12</a>,<a href="#ref-uXRnjUvq" role="doc-biblioref">13</a>,<a href="#ref-19wuAzYvo" role="doc-biblioref">14</a>]</span>.</p>
-<p>The other supposes that even high-dimensional complex systems may be well predicted by linear dividing lines.
+<p>The other supposes that even high-dimensional complex systems may have linear decision boundaries.
 This is supported empirically: linear models seem to do as well as or better than non-linear ones in many cases <span class="citation" data-cites="1Dt8XU1y4">[<a href="#ref-1Dt8XU1y4" role="doc-biblioref">15</a>]</span>.
 While papers of this sort are harder to come by — perhaps scientists do not tend to write papers about how their deep learning model was worse than logistic regression — other complex biological problems have also seen linear models prove equivalent to non-linear ones <span class="citation" data-cites="182D7GluU 1lk3HMPq">[<a href="#ref-182D7GluU" role="doc-biblioref">16</a>,<a href="#ref-1lk3HMPq" role="doc-biblioref">17</a>]</span>.</p>
 <p>We design experiments to ablate linear signal and find merit to both hypotheses.
 We construct a system of binary and multi-class classification problems on the GTEx and Recount3 compendia <span class="citation" data-cites="187XBwaz7 xdJRSgce">[<a href="#ref-187XBwaz7" role="doc-biblioref">18</a>,<a href="#ref-xdJRSgce" role="doc-biblioref">19</a>]</span> that shows linear and non-linear models have similar accuracy on several prediction tasks.
 However, upon removing the linear signals relating the phenotype to gene expression we find non-linear signal in the data even when the linear models outperform the non-linear ones.
-Given the unexpected nature of these findings, we evaluated independent tasks, examined different problem formulations, and verified our models’ behavior with simulated data.
-The models’ results were consistent across each setting, and the models themselves were comparable, as they used the same training and hyperparameter optimization processes <span class="citation" data-cites="d0Y8oUiO">[<a href="#ref-d0Y8oUiO" role="doc-biblioref">20</a>]</span>.</p>
+Given the unexpected nature of these findings, we evaluate independent tasks, examine different problem formulations, and verify our models’ behavior with simulated data.
+The models’ results are consistent across each setting, and the models themselves are comparable, as they use the same training and hyperparameter optimization processes <span class="citation" data-cites="d0Y8oUiO">[<a href="#ref-d0Y8oUiO" role="doc-biblioref">20</a>]</span>.</p>
 <p>In reconciling these two ostensibly conflicting theories, we confirm the importance of implementing and optimizing a linear baseline model before deploying a complex non-linear approach.
 While non-linear models may outperform simpler models at the limit of infinite data, they do not necessarily do so even when trained on the largest datasets publicly available today.</p>
 <h2 id="results">Results</h2>
@@ -192,14 +192,15 @@ In this setting we found that while the models all performed similarly, the non-
 </figure>
 </div>
 <h3 id="there-is-predictive-non-linear-signal-in-transcriptomic-data">There is predictive non-linear signal in transcriptomic data</h3>
-<p>Our results to this point are consistent with a model where the predictive signal present in transcriptomic data is entirely linear.
+<p>Our results to this point are consistent with a world where the predictive signal present in transcriptomic data is entirely linear.
 If that were the case, non-linear models like neural networks would fail to give any substantial advantage.
+However, based on past results we expect there to be relevant nonlinear biological signal <span class="citation" data-cites="eirYTTyk">[<a href="#ref-eirYTTyk" role="doc-biblioref">23</a>]</span>.
 To get a clearer idea of what that would look like, we simulated three datasets to better understand model performance for a variety of data generating processes.
-We created data with both linear and non-linear signal by generating two types of features: half of the features with a linear dividing line between the simulated classes and half with a non-linear dividing line (see <a href="#methods">Methods</a> for more detail).
+We created data with both linear and non-linear signal by generating two types of features: half of the features with a linear decision boundary between the simulated classes and half with a non-linear decision boundary (see <a href="#methods">Methods</a> for more details).
 After training to classify the simulated dataset, all models effectively predicted the simulated classes.
-To determine whether or not there was non-linear signal, we then used Limma <span class="citation" data-cites="PO5Xkwt3">[<a href="#ref-PO5Xkwt3" role="doc-biblioref">23</a>]</span> to remove the linear signal associated with the endpoint being predicted.
+To determine whether or not there was non-linear signal, we then used Limma <span class="citation" data-cites="PO5Xkwt3">[<a href="#ref-PO5Xkwt3" role="doc-biblioref">24</a>]</span> to remove the linear signal associated with the endpoint being predicted.
 After removing the linear signal from the dataset, non-linear models correctly predicted classes, but logistic regression performed no better than random (fig <a href="#fig:simulation">3</a>).</p>
-<p>To confirm that non-linear signal was key to the performance of non-linear methods, we generated another simulated dataset consisting solely of features with a linear dividing line between the classes.
+<p>To confirm that non-linear signal was key to the performance of non-linear methods, we generated another simulated dataset consisting solely of features with a linear decision boundary between the classes.
 As before, all models were able to predict the different classes well.
 However, once the linear signal was removed, all models performed no better than random guessing (fig <a href="#fig:simulation">3</a>).
 That the non-linear models only achieved baseline accuracy also indicated that the signal removal method was not injecting non-linear signal into data where non-linear signal did not exist.</p>
@@ -225,7 +226,7 @@ Logistic regression, in particular, performed no better than random.</p>
 </figure>
 </div>
 <p>To verify that our results were not an artifact of our decision to assign studies to cross-validation folds rather than samples, we compared the study-wise splitting that we used with an alternate method called sample-wise splitting.
-Sample-wise splitting (see <a href="#methods">Methods</a>) is common in machine learning, but can leak information between the training and validation sets when samples are not independently and identically distributed among studies - a common feature of data in biology <span class="citation" data-cites="13prIHiSM">[<a href="#ref-13prIHiSM" role="doc-biblioref">24</a>]</span>.
+Sample-wise splitting (see <a href="#methods">Methods</a>) is common in machine learning, but can leak information between the training and validation sets when samples are not independently and identically distributed among studies - a common feature of data in biology <span class="citation" data-cites="13prIHiSM">[<a href="#ref-13prIHiSM" role="doc-biblioref">25</a>]</span>.
 We found that sample-wise splitting induced substantial performance inflation (supp. fig. <a href="#fig:splitting">8</a>).
 The relative performance of each model stayed the same regardless of the data splitting technique, so the results observed were not dependent on the choice of splitting technique.</p>
 <p>Another growing strategy in machine learning, especially on biological data where samples are limited, is training models on a general-purpose dataset and fine-tuning them on a dataset of interest.
@@ -241,17 +242,17 @@ However, the non-linear models did not have a greater performance gain from pret
 We zero-one standardized the data and retained the 5000 most variable genes.
 The tissue labels we used for the GTEx dataset were derived from the ‘SMTS’ column of the sample metadata file.</p>
 <h4 id="recount3">Recount3</h4>
-<p>We downloaded RNA-seq data from the Recount3 compendium <span class="citation" data-cites="zepEBNtj">[<a href="#ref-zepEBNtj" role="doc-biblioref">25</a>]</span> during the week of March 14, 2022.
+<p>We downloaded RNA-seq data from the Recount3 compendium <span class="citation" data-cites="zepEBNtj">[<a href="#ref-zepEBNtj" role="doc-biblioref">26</a>]</span> during the week of March 14, 2022.
 Before filtering, the dataset contained 317,258 samples, each containing 63,856 genes.
 To filter out single-cell data, we removed all samples with greater than 75 percent sparsity.
 We also removed all samples marked ‘scrna-seq’ by Recount3’s pattern matching method (stored in the metadata as ‘recount_pred.pattern.predict.type’).
-We then converted the data to transcripts per kilobase million using gene lengths from BioMart <span class="citation" data-cites="Qgjx8811">[<a href="#ref-Qgjx8811" role="doc-biblioref">26</a>]</span> and performed standardization to scale each gene’s range from zero to one.
+We then converted the data to transcripts per kilobase million using gene lengths from BioMart <span class="citation" data-cites="Qgjx8811">[<a href="#ref-Qgjx8811" role="doc-biblioref">27</a>]</span> and performed standardization to scale each gene’s range from zero to one.
 We kept the 5,000 most variable genes within the dataset.</p>
 <p>We labeled samples with their corresponding tissues using the ‘recount_pred.curated.tissue’ field in the Recount3 metadata.
 These labels were based on manual curation by the Recount3 authors.
 A total of 20,324 samples in the dataset had corresponding tissue labels.
 Samples were also labeled with their corresponding sex using labels from Flynn et al. <span class="citation" data-cites="11QqOFPV2">[<a href="#ref-11QqOFPV2" role="doc-biblioref">3</a>]</span>.
-These labels were derived using pattern matching on metadata from the European Nucleotide Archive <span class="citation" data-cites="yLsmK3mK">[<a href="#ref-yLsmK3mK" role="doc-biblioref">27</a>]</span>.
+These labels were derived using pattern matching on metadata from the European Nucleotide Archive <span class="citation" data-cites="yLsmK3mK">[<a href="#ref-yLsmK3mK" role="doc-biblioref">28</a>]</span>.
 A total of 23,525 samples in our dataset had sex labels.</p>
 <h4 id="data-simulation">Data simulation</h4>
 <p>We generated three simulated datasets.
@@ -266,20 +267,20 @@ The final dataset contained only values drawn from a standard normal distributio
 <h3 id="model-architectures">Model architectures</h3>
 <p>We used three representative models to demonstrate the performance profiles of different model classes.
 The first was a linear model, ridge logistic regression, selected as a simple linear baseline to compare the non-linear models against.
-The next model was a three-layer fully-connected neural network with ReLU non-linearities <span class="citation" data-cites="Xk9rmxAA">[<a href="#ref-Xk9rmxAA" role="doc-biblioref">28</a>]</span> and hidden layers of size 2500 and 1250.
+The next model was a three-layer fully-connected neural network with ReLU non-linearities <span class="citation" data-cites="Xk9rmxAA">[<a href="#ref-Xk9rmxAA" role="doc-biblioref">29</a>]</span> and hidden layers of size 2500 and 1250.
 This network served as a model of intermediate complexity: it was capable of learning non-linear decision boundaries, but not the more complex representations a deeper model might learn.
 Finally, we built a five-layer neural network to serve as a (somewhat) deep neural net.
 This model also used ReLU non-linearities, and had hidden layers of sizes 2500, 2500, 2500, and 1250.
 The five-layer network, while not particularly deep compared to, e.g., state of the art computer vision models, was still in the domain where more complex representations could be learned, and vanishing gradients had to be accounted for.</p>
 <h3 id="model-training">Model training</h3>
-<p>We trained our models via a maximum of 50 epochs of mini-batch stochastic gradient descent in PyTorch <span class="citation" data-cites="iTP4h1rX">[<a href="#ref-iTP4h1rX" role="doc-biblioref">29</a>]</span>.
-Our models minimized the cross-entropy loss using an Adam <span class="citation" data-cites="c6d3lKFX">[<a href="#ref-c6d3lKFX" role="doc-biblioref">30</a>]</span> optimizer.
+<p>We trained our models via a maximum of 50 epochs of mini-batch stochastic gradient descent in PyTorch <span class="citation" data-cites="iTP4h1rX">[<a href="#ref-iTP4h1rX" role="doc-biblioref">30</a>]</span>.
+Our models minimized the cross-entropy loss using an Adam <span class="citation" data-cites="c6d3lKFX">[<a href="#ref-c6d3lKFX" role="doc-biblioref">31</a>]</span> optimizer.
 They also used inverse frequency weighting to avoid giving more weight to more common classes.
 To regularize the models, we used early stopping and gradient clipping during the training process.
-The only training differences between the models were that the two neural nets used dropout <span class="citation" data-cites="ynNhuuuv">[<a href="#ref-ynNhuuuv" role="doc-biblioref">31</a>]</span> with a probability of 0.5, and the deeper network used batch normalization <span class="citation" data-cites="io1g9Re6">[<a href="#ref-io1g9Re6" role="doc-biblioref">32</a>]</span> to mitigate the vanishing gradient problem.</p>
+The only training differences between the models were that the two neural nets used dropout <span class="citation" data-cites="ynNhuuuv">[<a href="#ref-ynNhuuuv" role="doc-biblioref">32</a>]</span> with a probability of 0.5, and the deeper network used batch normalization <span class="citation" data-cites="io1g9Re6">[<a href="#ref-io1g9Re6" role="doc-biblioref">33</a>]</span> to mitigate the vanishing gradient problem.</p>
 <p>We ensured the results were deterministic by setting the Python, NumPy, and PyTorch random seeds for each run, as well as setting the PyTorch backends to deterministic and disabling the benchmark mode.
-The learning rate and weight decay hyperparameters for each model were selected via nested cross-validation over the training folds at runtime, and we tracked and recorded our model training progress using Neptune <span class="citation" data-cites="1Dhv6WYjo">[<a href="#ref-1Dhv6WYjo" role="doc-biblioref">33</a>]</span>.
-We also used Limma<span class="citation" data-cites="PO5Xkwt3">[<a href="#ref-PO5Xkwt3" role="doc-biblioref">23</a>]</span> to remove linear signal associated with tissues in the data.
+The learning rate and weight decay hyperparameters for each model were selected via nested cross-validation over the training folds at runtime, and we tracked and recorded our model training progress using Neptune <span class="citation" data-cites="1Dhv6WYjo">[<a href="#ref-1Dhv6WYjo" role="doc-biblioref">34</a>]</span>.
+We also used Limma<span class="citation" data-cites="PO5Xkwt3">[<a href="#ref-PO5Xkwt3" role="doc-biblioref">24</a>]</span> to remove linear signal associated with tissues in the data.
 More precisely, we ran the ‘removeBatchEffect’ function on the training and validation sets separately, using the tissue labels as batch labels.</p>
 <h3 id="model-evaluation">Model Evaluation</h3>
 <p>In our analyses we used five-fold cross-validation with study-wise data splitting.
@@ -288,7 +289,7 @@ In a study-wise split, the studies are randomly assigned to cross-validation fol
 Our analyses were performed on an Ubuntu 18.04 machine and the Colorado Summit compute cluster.
 The desktop CPU used was an AMD Ryzen 7 3800xt processor with 16 cores and access to 64 GB of RAM, and the desktop GPU used was an Nvidia RTX 3090.
 The Summit cluster used Intel Xeon E5-2680 CPUs and NVidia Tesla K80 GPUs.
-From initiating data download to finishing all analyses and generating all figures, the full Snakemake <span class="citation" data-cites="NcYZqBux">[<a href="#ref-NcYZqBux" role="doc-biblioref">34</a>]</span> pipeline took around one month to run.</p>
+From initiating data download to finishing all analyses and generating all figures, the full Snakemake <span class="citation" data-cites="NcYZqBux">[<a href="#ref-NcYZqBux" role="doc-biblioref">35</a>]</span> pipeline took around one month to run.</p>
 <p><strong>Recount3 tissue prediction</strong><br />
 In the Recount3 setting, the multi-tissue classification analyses were trained on the 21 tissues (see Supp. Methods) that had at least ten studies in the dataset.
 Each model was trained to determine which of the 21 tissues a given expression sample corresponded to.</p>
@@ -323,7 +324,8 @@ This was true in simulated data as well as GTEx and Recount3 data across several
 These results also held in altered problem settings, such as using a pretraining dataset before the training dataset and using sample-wise data splitting instead of study-wise splitting.
 This consistent presence of non-linear signal demonstrated that the similarity in performance across model types was not due to our problem domains having solely linear signals.</p>
 <p>Given that non-linear signal is present in our problem domains, why doesn’t that signal allow non-linear models to make better predictions?
-It is possible that the non-linear signal is either entirely redundant with the linear signal or unreliable enough that non-linear methods prioritize learning the linear signal when it is present.</p>
+Perhaps the signal is simply drowned out.
+Recent work has shown that only a fraction of a percent of gene-gene relationships have strong non-linear correlation despite a weak linear one <span class="citation" data-cites="eirYTTyk">[<a href="#ref-eirYTTyk" role="doc-biblioref">23</a>]</span>.</p>
 <p>One limitation of our study is that the results likely do not hold in an infinite data setting.
 Deep learning models have been shown to solve complex problems in biology and tend to significantly outperform linear models when given enough data.
 However, we do not yet live in a world in which millions of well-annotated examples are available in many areas of biology.
@@ -333,6 +335,8 @@ There are many potential transcriptomic prediction tasks and many datasets to pe
 While we show that non-linear signal is not always helpful in tissue or sex prediction, and others have shown the same for various disease prediction tasks, there may be problems where non-linear signal is more important.</p>
 <p>Ultimately, our results show that task-relevant non-linear signal in the data, which we confirm is present, does not necessarily lead non-linear models to outperform linear ones.
 Additionally, our results suggest that scientists making predictions from expression data should always include simple linear models as a baseline to determine whether more complex models are warranted.</p>
+<h3 id="code-and-data-availability">Code and Data Availability</h3>
+<p>The code, data, and model weights to reproduce this work can be found at https://github.com/greenelab/linear_signal.</p>
 <h3 id="acknowledgements">Acknowledgements</h3>
 <p>We would like to thank Alexandra Lee and Jake Crawford for reviewing code that went into this project.
 We would also like to thank the past and present members of GreeneLab who gave feedback on this project during lab meetings.
@@ -456,41 +460,44 @@ Performance of Recount3 multiclass prediction with pretraining</figcaption>
 <div id="ref-1GBPSAJ10" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>The Sequence Read Archive</strong> <div class="csl-block">R Leinonen, H Sugawara, M Shumway</div> <em>Nucleic Acids Research</em> (2010-11-09) <a href="https://doi.org/c652z5">https://doi.org/c652z5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gkq1019">10.1093/nar/gkq1019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21062823">21062823</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3013647">PMC3013647</a></div></div>
 </div>
+<div id="ref-eirYTTyk" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>An efficient not-only-linear correlation coefficient based on machine learning</strong> <div class="csl-block">Milton Pividori, Marylyn D Ritchie, Diego H Milone, Casey S Greene</div> <em>Cold Spring Harbor Laboratory</em> (2022-06-17) <a href="https://doi.org/gqcvbw">https://doi.org/gqcvbw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.06.15.496326">10.1101/2022.06.15.496326</a></div></div>
+</div>
 <div id="ref-PO5Xkwt3" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>limma powers differential expression analyses for RNA-sequencing and microarray studies</strong> <div class="csl-block">Matthew E Ritchie, Belinda Phipson, Di Wu, Yifang Hu, Charity W Law, Wei Shi, Gordon K Smyth</div> <em>Nucleic Acids Research</em> (2015-01-20) <a href="https://doi.org/f7c4n5">https://doi.org/f7c4n5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gkv007">10.1093/nar/gkv007</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25605792">25605792</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4402510">PMC4402510</a></div></div>
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>limma powers differential expression analyses for RNA-sequencing and microarray studies</strong> <div class="csl-block">Matthew E Ritchie, Belinda Phipson, Di Wu, Yifang Hu, Charity W Law, Wei Shi, Gordon K Smyth</div> <em>Nucleic Acids Research</em> (2015-01-20) <a href="https://doi.org/f7c4n5">https://doi.org/f7c4n5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gkv007">10.1093/nar/gkv007</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25605792">25605792</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4402510">PMC4402510</a></div></div>
 </div>
 <div id="ref-13prIHiSM" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Navigating the pitfalls of applying machine learning in genomics</strong> <div class="csl-block">Sean Whalen, Jacob Schreiber, William S Noble, Katherine S Pollard</div> <em>Nature Reviews Genetics</em> (2021-11-26) <a href="https://doi.org/gnm4r9">https://doi.org/gnm4r9</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41576-021-00434-9">10.1038/s41576-021-00434-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34837041">34837041</a></div></div>
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Navigating the pitfalls of applying machine learning in genomics</strong> <div class="csl-block">Sean Whalen, Jacob Schreiber, William S Noble, Katherine S Pollard</div> <em>Nature Reviews Genetics</em> (2021-11-26) <a href="https://doi.org/gnm4r9">https://doi.org/gnm4r9</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41576-021-00434-9">10.1038/s41576-021-00434-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34837041">34837041</a></div></div>
 </div>
 <div id="ref-zepEBNtj" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Phosphorylation of ETS transcription factor ER81 in a complex with its coactivators CREB-binding protein and p300</strong> <div class="csl-block">S Papoutsopoulou, R Janknecht</div> <em>Molecular and cellular biology</em> (2000-10) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC86284/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC86284/</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1128/MCB.20.19.7300-7310.2000">10.1128/mcb.20.19.7300-7310.2000</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/10982847">10982847</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC86284">PMC86284</a></div></div>
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>Phosphorylation of ETS transcription factor ER81 in a complex with its coactivators CREB-binding protein and p300</strong> <div class="csl-block">S Papoutsopoulou, R Janknecht</div> <em>Molecular and cellular biology</em> (2000-10) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC86284/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC86284/</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1128/MCB.20.19.7300-7310.2000">10.1128/mcb.20.19.7300-7310.2000</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/10982847">10982847</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC86284">PMC86284</a></div></div>
 </div>
 <div id="ref-Qgjx8811" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>BioMart--biological queries made easy</strong> <div class="csl-block">Damian Smedley, Syed Haider, Benoit Ballester, Richard Holland, Darin London, Gudmundur Thorisson, Arek Kasprzyk</div> <em>BMC genomics</em> (2009-01-14) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649164/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649164/</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/1471-2164-10-22">10.1186/1471-2164-10-22</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19144180">19144180</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649164">PMC2649164</a></div></div>
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>BioMart--biological queries made easy</strong> <div class="csl-block">Damian Smedley, Syed Haider, Benoit Ballester, Richard Holland, Darin London, Gudmundur Thorisson, Arek Kasprzyk</div> <em>BMC genomics</em> (2009-01-14) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649164/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649164/</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/1471-2164-10-22">10.1186/1471-2164-10-22</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19144180">19144180</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649164">PMC2649164</a></div></div>
 </div>
 <div id="ref-yLsmK3mK" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>The European Nucleotide Archive</strong> <div class="csl-block">Rasko Leinonen, Ruth Akhtar, Ewan Birney, Lawrence Bower, Ana Cerdeno-Tárraga, Ying Cheng, Iain Cleland, Nadeem Faruque, Neil Goodgame, Richard Gibson, … Guy Cochrane</div> <em>Nucleic acids research</em> (2011-01) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3013801/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3013801/</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gkq967">10.1093/nar/gkq967</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20972220">20972220</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3013801">PMC3013801</a></div></div>
+<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>The European Nucleotide Archive</strong> <div class="csl-block">Rasko Leinonen, Ruth Akhtar, Ewan Birney, Lawrence Bower, Ana Cerdeno-Tárraga, Ying Cheng, Iain Cleland, Nadeem Faruque, Neil Goodgame, Richard Gibson, … Guy Cochrane</div> <em>Nucleic acids research</em> (2011-01) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3013801/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3013801/</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gkq967">10.1093/nar/gkq967</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20972220">20972220</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3013801">PMC3013801</a></div></div>
 </div>
 <div id="ref-Xk9rmxAA" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>Rectified linear units improve restricted boltzmann machines</strong> <div class="csl-block">Vinod Nair, Geoffrey E Hinton</div> <em>Proceedings of the 27th International Conference on International Conference on Machine Learning</em> (2010-06-21) <a href="https://dl.acm.org/doi/10.5555/3104322.3104425">https://dl.acm.org/doi/10.5555/3104322.3104425</a> <div class="csl-block">ISBN: 9781605589077</div></div>
+<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>Rectified linear units improve restricted boltzmann machines</strong> <div class="csl-block">Vinod Nair, Geoffrey E Hinton</div> <em>Proceedings of the 27th International Conference on International Conference on Machine Learning</em> (2010-06-21) <a href="https://dl.acm.org/doi/10.5555/3104322.3104425">https://dl.acm.org/doi/10.5555/3104322.3104425</a> <div class="csl-block">ISBN: 9781605589077</div></div>
 </div>
 <div id="ref-iTP4h1rX" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>PyTorch: An Imperative Style, High-Performance Deep Learning Library</strong> <div class="csl-block">Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, … Soumith Chintala</div> <em>arXiv</em> (2019-12-05) <a href="https://arxiv.org/abs/1912.01703">https://arxiv.org/abs/1912.01703</a></div>
+<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>PyTorch: An Imperative Style, High-Performance Deep Learning Library</strong> <div class="csl-block">Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, … Soumith Chintala</div> <em>arXiv</em> (2019-12-05) <a href="https://arxiv.org/abs/1912.01703">https://arxiv.org/abs/1912.01703</a></div>
 </div>
 <div id="ref-c6d3lKFX" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>Adam: A Method for Stochastic Optimization</strong> <div class="csl-block">Diederik P Kingma, Jimmy Ba</div> <em>arXiv</em> (2017-01-31) <a href="https://arxiv.org/abs/1412.6980">https://arxiv.org/abs/1412.6980</a></div>
+<div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>Adam: A Method for Stochastic Optimization</strong> <div class="csl-block">Diederik P Kingma, Jimmy Ba</div> <em>arXiv</em> (2017-01-31) <a href="https://arxiv.org/abs/1412.6980">https://arxiv.org/abs/1412.6980</a></div>
 </div>
 <div id="ref-ynNhuuuv" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>Dropout: A Simple Way to Prevent Neural Networks from Overfitting</strong> <div class="csl-block">Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, Ruslan Salakhutdinov</div> <em>Journal of Machine Learning Research</em> (2014) <a href="http://jmlr.org/papers/v15/srivastava14a.html">http://jmlr.org/papers/v15/srivastava14a.html</a></div>
+<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>Dropout: A Simple Way to Prevent Neural Networks from Overfitting</strong> <div class="csl-block">Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, Ruslan Salakhutdinov</div> <em>Journal of Machine Learning Research</em> (2014) <a href="http://jmlr.org/papers/v15/srivastava14a.html">http://jmlr.org/papers/v15/srivastava14a.html</a></div>
 </div>
 <div id="ref-io1g9Re6" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</strong> <div class="csl-block">Sergey Ioffe, Christian Szegedy</div> <em>Proceedings of the 32nd International Conference on Machine Learning</em> (2015-06-01) <a href="https://proceedings.mlr.press/v37/ioffe15.html">https://proceedings.mlr.press/v37/ioffe15.html</a></div>
+<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</strong> <div class="csl-block">Sergey Ioffe, Christian Szegedy</div> <em>Proceedings of the 32nd International Conference on Machine Learning</em> (2015-06-01) <a href="https://proceedings.mlr.press/v37/ioffe15.html">https://proceedings.mlr.press/v37/ioffe15.html</a></div>
 </div>
 <div id="ref-1Dhv6WYjo" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>Neptune: Experiment management and collaboration tool</strong> <div class="csl-block">neptune.ai</div> (2020) <a href="https://neptune.ai">https://neptune.ai</a></div>
+<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>Neptune: Experiment management and collaboration tool</strong> <div class="csl-block">neptune.ai</div> (2020) <a href="https://neptune.ai">https://neptune.ai</a></div>
 </div>
 <div id="ref-NcYZqBux" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>Snakemake--a scalable bioinformatics workflow engine</strong> <div class="csl-block">J Koster, S Rahmann</div> <em>Bioinformatics</em> (2012-08-20) <a href="https://doi.org/gd2xzq">https://doi.org/gd2xzq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bts480">10.1093/bioinformatics/bts480</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22908215">22908215</a></div></div>
+<div class="csl-left-margin">35. </div><div class="csl-right-inline"><strong>Snakemake--a scalable bioinformatics workflow engine</strong> <div class="csl-block">J Koster, S Rahmann</div> <em>Bioinformatics</em> (2012-08-20) <a href="https://doi.org/gd2xzq">https://doi.org/gd2xzq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bts480">10.1093/bioinformatics/bts480</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22908215">22908215</a></div></div>
 </div>
 </div>
 <!-- default theme -->
