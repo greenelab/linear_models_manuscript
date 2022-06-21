@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/greenelab/linear_models_manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://greenelab.github.io/linear_models_manuscript/>.
-The permalink for this webpage version is <https://greenelab.github.io/linear_models_manuscript/v/75e2411c3892365982bda25861b6a7d8f252e865/>.
+The permalink for this webpage version is <https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://greenelab.github.io/linear_models_manuscript/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`75e2411c3892365982bda25861b6a7d8f252e865`](https://github.com/greenelab/linear_models_manuscript/commit/75e2411c3892365982bda25861b6a7d8f252e865).
+[`1e66734d3136207032765582b2913ff5e59767ab`](https://github.com/greenelab/linear_models_manuscript/commit/1e66734d3136207032765582b2913ff5e59767ab).
