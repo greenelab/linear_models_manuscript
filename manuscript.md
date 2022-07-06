@@ -6,7 +6,7 @@ keywords:
 - tissue prediction
 - nonlinear models
 lang: en-US
-date-meta: '2022-06-21'
+date-meta: '2022-07-06'
 author-meta:
 - Benjamin J. Heil
 - Jake Crawford
@@ -21,8 +21,8 @@ header-includes: |-
   <meta name="citation_title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="og:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
   <meta property="twitter:title" content="The Effects of Nonlinear Signal on Expression-Based Prediction Performance" />
-  <meta name="dc.date" content="2022-06-21" />
-  <meta name="citation_publication_date" content="2022-06-21" />
+  <meta name="dc.date" content="2022-07-06" />
+  <meta name="citation_publication_date" content="2022-07-06" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -48,9 +48,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/linear_models_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/7232682b886b61b6050183cc15f3099ba74ef412/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/7232682b886b61b6050183cc15f3099ba74ef412/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/7232682b886b61b6050183cc15f3099ba74ef412/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -72,10 +72,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/linear_models_manuscript/v/1e66734d3136207032765582b2913ff5e59767ab/))
+([permalink](https://greenelab.github.io/linear_models_manuscript/v/7232682b886b61b6050183cc15f3099ba74ef412/))
 was automatically generated
-from [greenelab/linear_models_manuscript@1e66734](https://github.com/greenelab/linear_models_manuscript/tree/1e66734d3136207032765582b2913ff5e59767ab)
-on June 21, 2022.
+from [greenelab/linear_models_manuscript@7232682](https://github.com/greenelab/linear_models_manuscript/tree/7232682b886b61b6050183cc15f3099ba74ef412)
+on July 6, 2022.
 </em></small>
 
 ## Authors
@@ -375,6 +375,7 @@ Additionally, our results suggest that scientists making predictions from expres
 
 ### Code and Data Availability
 The code, data, and model weights to reproduce this work can be found at https://github.com/greenelab/linear_signal.
+Our work meets the bronze standard of reproducibility [@doi:10.1038/s41592-021-01256-7] and fulfills aspects of the silver and gold standards including deterministic operation and an automated analysis pipeline.
 
 ### Acknowledgements
 We would like to thank Alexandra Lee and Jake Crawford for reviewing code that went into this project.
