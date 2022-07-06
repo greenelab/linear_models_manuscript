@@ -8,7 +8,7 @@ CPUs
 CSG
 curation
 dataset
-Datasets
+datasets
 dimensionality
 funders
 GBMF
@@ -16,7 +16,7 @@ GPUs
 GreeneLab
 greenescientist
 GTEx
-heil
+Heil
 hyperparameter
 hyperparameters
 jjc
@@ -31,7 +31,7 @@ phenotypes
 pre
 pretrain
 pretrained
-Pretraining
+pretraining
 ReLU
 removeBatchEffect
 reproducibility
@@ -45,6 +45,6 @@ Snakemake
 subsampled
 subtyping
 TPM
-transcriptomic
+Transcriptomic
 Xeon
 xt

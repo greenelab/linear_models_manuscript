@@ -48,9 +48,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/linear_models_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/linear_models_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/7232682b886b61b6050183cc15f3099ba74ef412/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/7232682b886b61b6050183cc15f3099ba74ef412/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/7232682b886b61b6050183cc15f3099ba74ef412/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/linear_models_manuscript/v/52dac71241c32c018bcba116cfb9433b16e6dbbb/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/52dac71241c32c018bcba116cfb9433b16e6dbbb/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/linear_models_manuscript/v/52dac71241c32c018bcba116cfb9433b16e6dbbb/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -72,9 +72,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/linear_models_manuscript/v/7232682b886b61b6050183cc15f3099ba74ef412/))
+([permalink](https://greenelab.github.io/linear_models_manuscript/v/52dac71241c32c018bcba116cfb9433b16e6dbbb/))
 was automatically generated
-from [greenelab/linear_models_manuscript@7232682](https://github.com/greenelab/linear_models_manuscript/tree/7232682b886b61b6050183cc15f3099ba74ef412)
+from [greenelab/linear_models_manuscript@52dac71](https://github.com/greenelab/linear_models_manuscript/tree/52dac71241c32c018bcba116cfb9433b16e6dbbb)
 on July 6, 2022.
 </em></small>
 
